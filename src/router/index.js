@@ -10,23 +10,28 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../components/About.vue'),
+    component: () => import('../views/AboutView.vue'),
   },
   {
     path: '/projects',
     name: 'projects',
-    component: () => import('../.vue'),
+    component: () => import('../views/ProjectsView.vue'),
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    path: '/education',
+    name: 'education',
+    component: () => import( '../views/EducationView.vue'),
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
+    path: '/testimonials',
+    name: 'testimonials',
+    component: () => import( '../views/TestimonialsView.vue'),
   },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import( '../views/ContactView.vue'),
+  }
   
 ];
 
