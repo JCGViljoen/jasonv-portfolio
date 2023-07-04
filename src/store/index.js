@@ -1,24 +1,35 @@
-import { createStore } from 'vuex'
+// store/modules/projects.js
+import axios from 'axios';
 
-export default createStore({
-  state: {
-    portfolioData: null,
-  },
-  getters: {
+const state = {
+  project: [],
+};
 
+const mutations = {
+  SET_PROJECTS(state, project) {
+    state.project = project;
   },
-  mutations: {
-    setPortfolioData(state, data) {
-      state.portfolioData = data;
+};
+
+const actions = {
+  async fetchProject({ commit }) {
+    try {
+      const response = await axios.get('https://jcgviljoen.github.io/portfolio-server/index.json');
+      const project = response.data;
+      commit('SET_PROJECT', project);
+    } catch (error) {
+      console.error('Error fetching project:', error);
     }
   },
-  actions: {
-    async fetchPortfolioData({commit}) {
-      const response = await fetch ('https://jcgviljoen.github.io/portfolio-server/index.json')
-      const data = await response.json();
-      commit ('setPotfolioData', data);
-    }
-  },
-  modules: {
-  }
-})
+};
+
+const getters = {
+  getProject: state => state.project,
+};
+
+export default {
+  state,
+  mutations,
+  actions,
+  getters,
+};
