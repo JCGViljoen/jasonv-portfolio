@@ -29,6 +29,7 @@
 </script>
 
 <style scoped>
+
 #form{
   margin-top:8rem;
   background: url(https://i.postimg.cc/rmF1h6K2/jv-personal-logo-by-hinatainn-d8mt9g0-pre.jpg);
