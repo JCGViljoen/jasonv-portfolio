@@ -19,6 +19,9 @@ export default createStore({
     },
     setSkills(state, skills) {
       state.skills = skills;
+    },
+    setEducation(state, education) {
+      state.education = education;
     }
   },
   actions: {
@@ -47,6 +50,15 @@ export default createStore({
         commit('setSkills', skills);
       } catch (error) {
         console.error('Error fetching skills:', error);
+      }
+    },
+    async fetchEducation({ commit }) {
+      try {
+        const response = await axios.get('https://jcgviljoen.github.io/portfolio-server/index.json');
+        const education = response.data.education;
+        commit('setEducation', education);
+      } catch (error) {
+        console.error('Error fetching education:', error);
       }
     }
   },

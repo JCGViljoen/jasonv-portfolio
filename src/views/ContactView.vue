@@ -38,7 +38,5 @@
   margin-bottom: 50vh;
 }
 
-input{
-  
-}
+
 </style>
