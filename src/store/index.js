@@ -1,35 +1,55 @@
-// store/modules/projects.js
 import axios from 'axios';
+import { createStore } from 'vuex';
 
-const state = {
-  project: [],
-};
-
-const mutations = {
-  SET_PROJECTS(state, project) {
-    state.project = project;
+export default createStore({
+  state: {
+    project: [],
+    testimonials: [],
+    education: [],
+    skills: []
   },
-};
-
-const actions = {
-  async fetchProject({ commit }) {
-    try {
-      const response = await axios.get('https://jcgviljoen.github.io/portfolio-server/index.json');
-      const project = response.data;
-      commit('SET_PROJECT', project);
-    } catch (error) {
-      console.error('Error fetching project:', error);
+  getters: {
+  },
+  mutations: {
+    setProjects(state, project) {
+      state.project = project;
+    },
+    setTestimonials(state, testimonials) {
+      state.testimonials = testimonials;
+    },
+    setSkills(state, skills) {
+      state.skills = skills;
     }
   },
-};
-
-const getters = {
-  getProject: state => state.project,
-};
-
-export default {
-  state,
-  mutations,
-  actions,
-  getters,
-};
+  actions: {
+    async fetchProject({ commit }) {
+      try {
+        const response = await axios.get('https://jcgviljoen.github.io/portfolio-server/index.json');
+        const project = response.data.project;
+        commit('setProjects', project);
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+      }
+    },
+    async fetchTestimonials({ commit }) {
+      try {
+        const response = await axios.get('https://jcgviljoen.github.io/portfolio-server/index.json');
+        const testimonials = response.data.testimonials;
+        commit('setTestimonials', testimonials);
+      } catch (error) {
+        console.error('Error fetching testimonials:', error);
+      }
+    },
+    async fetchSkills({ commit }) {
+      try {
+        const response = await axios.get('https://jcgviljoen.github.io/portfolio-server/index.json');
+        const skills = response.data.skills;
+        commit('setSkills', skills);
+      } catch (error) {
+        console.error('Error fetching skills:', error);
+      }
+    }
+  },
+  modules: {
+  }
+});
