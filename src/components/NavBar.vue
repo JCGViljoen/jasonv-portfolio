@@ -2,13 +2,13 @@
    
     <nav class="navbar bg-body-tertiary fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Offcanvas navbar</a>
+    <a class="navbar-brand" href="#"><img src="https://i.postimg.cc/rmF1h6K2/jv-personal-logo-by-hinatainn-d8mt9g0-pre.jpg" alt="logo" loading="lazy"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="https://i.postimg.cc/rmF1h6K2/jv-personal-logo-by-hinatainn-d8mt9g0-pre.jpg" alt="logo"></h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
@@ -43,8 +43,25 @@
   
   <style>
   nav {
-    background-color: #f2f2f2;
     padding: 10px;
+    box-shadow: #000 3px 5px 4px;
+
+  }
+ .offcanvas-body.ul{
+    text-decoration: none;
+    color: white;
+
+  }
+  .offcanvas-body{
+    background-color: #000;
+    
+
+  }
+  img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50px;
+    box-shadow: #000 3px 5px 4px;
   }
   </style>
   

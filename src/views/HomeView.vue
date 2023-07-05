@@ -3,7 +3,7 @@
     <div id="app">
     <div class="hero">
       <div class="container">
-        <h1 class="hero-title">Welcome, I'm a Full Stack Web Developer</h1>
+        <h1 class="hero-title">Welcome, I'm an <span>aspiring</span> Full Stack Web Developer</h1>
         <p class="her-desciption">I build responsive and scalable web applications.</p>
         <a href="" class="btn btn-primary">Get in Touch</a>
       </div>
@@ -44,7 +44,8 @@
 
 
 .hero {
-      background-color: #f8f9fa;
+      background-color: white;
+      color: white;
       padding: 100px 0;
       text-align: center;
       border: solid #000;
@@ -68,7 +69,14 @@
       margin-bottom: 30px;
     }
 
-    
+  span{
+    color: #b3fffd;
+  }
+
+  .container{
+    margin-top: 3rem;
+  }
+
 
     
 
