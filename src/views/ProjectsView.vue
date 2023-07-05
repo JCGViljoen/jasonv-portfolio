@@ -6,7 +6,7 @@
                 <div class="card h-100" style="width: 18rem;">
                     <img :src="item.img" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <p class="card-text">{{ item.image }}</p>
+                     
                       <p class="card-text">{{ item.title }}</p>
                       <p class="card-text">{{ item.description }}</p>
                       <a :href="item.github" target="_blank" class="btn btn-danger">GitHub</a>
@@ -34,5 +34,7 @@ export default {
 
 <style scoped>
 
-
+.container{
+  margin-top:7rem;
+}
 </style>

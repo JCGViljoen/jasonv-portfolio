@@ -42,11 +42,11 @@
   
   <style scoped>
   #carouselExampleCaptions{
-    margin-top: 6rem;
+    margin-top: 8rem;
   }
 
   img{
-    max-width: 250px;
+   height: 6rem;
   }
   </style>
   
