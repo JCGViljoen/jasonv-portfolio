@@ -5,7 +5,9 @@
         <div class="container">
           <h1 class="hero-title">Welcome, I'm an <span class="animate__flash">aspiring</span> Full Stack Web Developer</h1>
           <p class="her-desciption">I build responsive and scalable web applications.</p>
-          <a href="../views/" class="btn btn-primary">Get in Touch</a>
+          <router-link class="btn btn-ouline-danger" to="/contact">Get in touch</router-link>
+          <p class="animate__animated animate__bounce">animate</p>
+          <p class="animate__animated animate__fadeInLeft">css</p>
         </div>
       </div>
     </div>
@@ -49,6 +51,7 @@
   
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
   
+  
   *,
   *::before,
   ::after{
@@ -56,15 +59,11 @@
     margin: 0;
     box-sizing: border-box;
   }
-  .home{
-   background: url(https://i.postimg.cc/VkxQ22Fk/pexels-adrien-olichon-2931246.jpg) no-repeat ;
-   background-size: cover ;
   
-  }
   
   
   .hero {
-        background-color: white;
+        
         color: white;
         padding: 100px 0;
         text-align: center;

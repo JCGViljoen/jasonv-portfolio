@@ -20,7 +20,7 @@
             <router-link to="/about">About</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/education">Education</router-link>
+            <router-link to="/education">Resume</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/projects">Projects</router-link>

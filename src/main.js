@@ -5,8 +5,9 @@ import router from './router'
 import store from './store'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '@fortawesome/fontawesome-svg-core'
 
+import 'animate.css'
+import 'animate.css/animate.min.css'
 
 createApp(App).use(store).use(router).mount('#app')
 

@@ -1,7 +1,7 @@
 <template>
     <div class="row">
       <div  class="col" id="image">
-        <img class="picture" src="https://i.postimg.cc/Twxg0MbT/90928282-1613696178782933-8697521963691671552-n.jpg" alt="" loading="lazy">
+        <img class="picture animate__animated animate__fadeInLeft" src="https://i.postimg.cc/Twxg0MbT/90928282-1613696178782933-8697521963691671552-n.jpg" alt="" loading="lazy">
       </div>
       <div class="col">
       <h1 class="lead">Need a <span>Creative</span>Product?
