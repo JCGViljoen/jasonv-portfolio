@@ -2,7 +2,8 @@
     <div >
         <main role="main" class="container">
     <section id="education">
-      <h2>Education</h2>
+      <h1 class="animate__animated animate__fadeInLeft" id="resume">Resume</h1>
+      <h2 >Education</h2>
       
       <ul class="timeline">
         <li>
@@ -49,8 +50,17 @@ import skills from "../components/Skills.vue"
 </script>
 
 <style scoped>
+
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
  main{
     margin-top: 9rem;
+ }
+
+ #resume{
+  color: #000;
+  font-family: 'Dancing Script' cursive;
+
  }
     
     .timeline {
@@ -65,7 +75,7 @@ import skills from "../components/Skills.vue"
     }
     
     .timeline .content {
-      background-color: #f1f1f1;
+      background-color: grey;
       border-radius: 5px;
       padding: 20px;
       position: relative;
