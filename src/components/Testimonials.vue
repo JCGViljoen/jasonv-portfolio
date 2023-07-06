@@ -1,7 +1,9 @@
 <template>
   <div class="card-container">
-    <div class="card" v-for="(testimonial, index) in project" :key="testimonial.id">
-      <img :src="testimonial.image" alt="testimonial image" class="card-image">
+    <div class="card animate__animated animate__bounceIn" v-for="(testimonial)  in project" :key="testimonial.id">
+      <div class="card-image-container">
+        <img :src="testimonial.image" alt="testimonial image" class="card-image">
+      </div>
       <div class="card-content">
         <h5>{{ testimonial.name }}</h5>
         <p><strong>{{ testimonial.relation }}</strong></p>
@@ -29,7 +31,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top:20rem;
+  margin-top: 7rem;
   background-color: black;
 }
 
@@ -47,28 +49,18 @@ export default {
   transform: translateY(-5px);
 }
 
+.card-image-container {
+  position: relative;
+}
+
 .card-image {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
 
 .card-content {
   padding: 1rem;
   text-align: center;
-}
-
-
-
-@media (max-width: 800px) {
-  .card {
-    width: calc(50% - 2rem);
-  }
-}
-
-@media (max-width: 576px) {
-  .card {
-    width: calc(100% - 2rem);
-  }
 }
 </style>
