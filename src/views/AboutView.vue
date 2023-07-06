@@ -1,74 +1,22 @@
 <template>
-  <div class="row">
-    <div  class="col" id="image">
-      <img src="https://i.postimg.cc/FKbRKB0F/pexels-pixabay-531880.jpg" alt="">
-    </div>
-    <div class="col">
-    <h1 >About Us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra faucibus ex, sed vestibulum purus auctor sed. Suspendisse consequat erat in est dapibus interdum. Vivamus vel sapien scelerisque, efficitur urna vitae, fringilla justo. Nulla eget augue sapien. Suspendisse potenti. Cras dapibus, dui vel tempor placerat, justo mi pulvinar nunc, non tempus ex sem at tortor. Integer condimentum, tellus eu scelerisque tincidunt, dolor justo varius est, et viverra eros risus ut nulla.</p>
-    <p>Donec ac fermentum ex. Curabitur ut pulvinar mauris. Quisque ultrices, justo a dapibus auctor, ipsum dui convallis tellus, nec semper massa nisi vel neque. Sed mollis ex at diam faucibus hendrerit. Praesent at mi commodo, rhoncus mauris sit amet, luctus sapien. Duis ultricies lorem ex, id cursus sem aliquet vel. Etiam feugiat dictum enim, a faucibus ex feugiat nec. Aenean sagittis tempor sem sed tristique. Donec ac finibus enim. Vestibulum iaculis tempor hendrerit.</p>
-  </div>
-<div class="lead">
-  <h4><a href="../assets/docs/jasonvCV.pdf" download="jasonvCV.pdf">Download my resume</a></h4>
-</div>
+  <div>
+    <about/>
+    
   </div>
 </template>
 
 <script>
+import about from "../components/About.vue"
+
   export default {
+    components: {
+      about
+      
+    }
     
   }
 </script>
 
 <style scoped>
-
-.row{
-  margin-top: 7rem;
-  display: flex;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
-}
-.col {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.text {
-  flex-basis: 50%;
-  padding: 0 20px;
-}
-
-.text h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.text p {
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-#image img {
- 
-  width: 20rem;
-  height: 20rem;
-}
-
-h4 a{
-  text-decoration: none;
-  color: #b3fffd;
-  font-family: 'Dancing Script', cursive;
-  font-weight: 700;
-  background-color: #000 ;
-  border: #000;
-  border-radius:10px;
-}
-
 
 </style>
