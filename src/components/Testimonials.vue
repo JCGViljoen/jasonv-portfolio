@@ -1,13 +1,11 @@
 <template>
-  <div class="row">
-    <div class="card-container">
-      <div class="card" v-for="(testimonial, index) in project" :key="testimonial.id" :class="{ active: index === 0 }">
-        <img :src="testimonial.image" alt="testimonial image" class="card-image">
-        <div class="card-body">
-          <h5>{{ testimonial.name }}</h5>
-          <h6><strong>{{ testimonial.relation }}</strong></h6>
-          <p>{{ testimonial.message }}</p>
-        </div>
+  <div class="card-container">
+    <div class="card" v-for="(testimonial, index) in project" :key="testimonial.id">
+      <img :src="testimonial.image" alt="testimonial image" class="card-image">
+      <div class="card-content">
+        <h5>{{ testimonial.name }}</h5>
+        <p><strong>{{ testimonial.relation }}</strong></p>
+        <p>{{ testimonial.message }}</p>
       </div>
     </div>
   </div>
@@ -27,54 +25,50 @@ export default {
 </script>
 
 <style scoped>
-
-.row{
-  margin-top:10rem;
-}
 .card-container {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top:20rem;
+  background-color: black;
 }
 
 .card {
-  flex: 0 0 80%;
-  margin: 0 1rem;
-  width: 10rem;
-  height: auto;
-  scroll-snap-align: start;
-  background-color: #000;
-  color: ehi;
+  width: 300px;
+  margin: 1rem;
+  background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
   transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px);
 }
 
 .card-image {
-  width: 10rem;
-  height: auto;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
-  border-radius: 8px 8px 0 0;
-  box-shadow: 3px 4px 6px #000;
 }
 
-.card-body {
+.card-content {
   padding: 1rem;
+  text-align: center;
 }
 
-@media (min-width: 576px) {
-  .card-container {
-    justify-content: center;
+
+
+@media (max-width: 800px) {
+  .card {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: calc(100% - 2rem);
   }
 }
 </style>
