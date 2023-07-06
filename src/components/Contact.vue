@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="form-container">
         <div class="container" id="form">
-    <h1>Contact Us</h1>
+    <h1>Lets get in touch</h1>
     <form action="https://formspree.io/f/mnqkqawk"
           method="POST">
       <div class="form-group">
@@ -16,7 +16,7 @@
         <label for="message">Message</label>
         <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
       </div>
-      <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" name="submit" class="btn btn-outline-info">Submit</button>
     </form>
   </div>
     </div>
@@ -31,11 +31,21 @@
 <style scoped>
 
 #form{
-  margin-top:8rem;
+  margin-top:7rem;
   background: url(https://i.postimg.cc/rmF1h6K2/jv-personal-logo-by-hinatainn-d8mt9g0-pre.jpg);
   border-radius: 10px 10px;
   box-shadow: #000 3px 4px 5px;
   margin-bottom: 50vh;
+}
+
+.form-container{
+  background: #000;
+  background-size:cover ;
+  height: 100vh;
+}
+
+h1{
+  font-family: 'Dancing Script', cursive;
 }
 
 

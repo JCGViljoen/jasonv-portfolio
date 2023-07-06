@@ -1,54 +1,53 @@
 <template>
-    <div>
-        <div class="container-fluid" id="box">
-            <div class="card" style="width: 18rem;" v-for="(project, index) in project" :key="project.id" :class="{ active: index === 0 }">
-                <img :src= project.image class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{project.name}}</h5>
-                  <p class="card-text">{{project.description}}</p>
-                  <a :href= project.github-url class="btn btn-outline-success">Github</a>
-                  <a :href= project.netlify-url class="btn btn-outline-success">Netlify</a>
-                </div>
-              </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-4" v-for="(project, index) in projects" :key="project.id" :class="{ active: index === 0 }">
+        <div class="card animate__animated animate__bounceIn">
+          <img :src="project.image" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ project.name }}</h5>
+            <p class="card-text">{{ project.description }}</p>
+            <a :href= project.githuburl class="btn btn-outline-info">Github</a>
+            <a :href= project.netlifyurl  class="btn btn-outline-info">Netlify</a>
+          </div>
         </div>
-        
-</div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-    export default {
-        computed:{
-    project(){
-      return this.$store.state.project
-    }
+export default {
+  computed: {
+    projects() {
+      return this.$store.state.project;
+    },
   },
-  mounted(){
-    this.$store.dispatch('fetchProject')
-  }
-    }
+  mounted() {
+    this.$store.dispatch('fetchProject');
+  },
+};
 </script>
 
 <style scoped>
 
-
-#box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 8rem;
-    margin-bottom: 100vh;
-   
+.container{
+  margin-top: 7rem;
+  background-color: #010101;
+  background-size: cover;
+}
+.card {
+  transition: transform 0.3s;
 }
 
+.card.active {
+  transform: scale(1.1);
+}
 
+@media (max-width: 800px) {
+  .col-sm-6 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
 </style>
-
-
-<!-- <div id="box" class="card text-bg-dark mb-3 " style="width:18rem; height:19rem" v-for="(project, index) in project" :key="project.id" :class="{ active: index === 0 }">
-    <img :src= project.image class="card-img" alt="project image">
-    <div class="card-img-overlay">
-      <h5 class="card-title">{{project.name}}</h5>
-      <p class="card-text">{{project.description}}</p>
-      <p class="card-text"><small>Last updated 3 mins ago</small></p>
-    </div>
-  </div> -->
