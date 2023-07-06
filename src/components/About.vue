@@ -1,0 +1,92 @@
+<template>
+    <div class="row">
+      <div  class="col" id="image">
+        <img class="picture" src="https://i.postimg.cc/Twxg0MbT/90928282-1613696178782933-8697521963691671552-n.jpg" alt="" loading="lazy">
+      </div>
+      <div class="col">
+      <h1 class="lead">Need a <span>Creative</span>Product?
+        I can Help You!</h1>
+      <p>Hi! Jason <span>Viljoen</span>, and I’m a developer who has passion for building clean web applications with intuitive functionality. I enjoy the process of turning ideas into reality using creative solutions. I’m always curious about learning new skills, tools, and concepts. In addition to working on various solo full stack projects.</p>
+    </div>
+  <div class="lead">
+    <h4><a href="../assets/docs/jasonvCV.pdf" download="jasonvCV.pdf">Download my resume</a></h4>
+  </div>
+    </div>
+  </template>
+  
+  <script>
+    export default {
+      
+    }
+  </script>
+  
+  <style scoped>
+  
+  template{
+    background-color: #000;
+  }
+  .row{
+    margin-top: 7rem;
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #010101;
+    height: 100vh;
+
+  
+  }
+  .col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .text {
+    flex-basis: 50%;
+    padding: 0 20px;
+  }
+  
+  .text h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .text p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  #image img {
+   border-radius: 10px;
+   box-shadow:white 3px 5px 4px;
+    width: 20rem;
+    height: 22rem;
+  }
+  
+  h4 a{
+    text-decoration: none;
+    color: #b3fffd;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    background-color: #000 ;
+    border: #b3fffd;
+    border-radius:10px;
+  }
+
+  span{
+    color: #b3fffd;
+  }
+  
+  h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  h4 a:hover{
+    color:white;
+  }
+  
+  </style>
