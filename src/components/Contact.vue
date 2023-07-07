@@ -6,15 +6,18 @@
           method="POST">
       <div class="form-group">
         <label for="name">Your Name</label>
-        <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required>
+        <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required  oninvalid="this.setCustomValidity('Please Enter Your Name')"
+        oninput="this.setCustomValidity('')">
       </div>
       <div class="form-group">
         <label for="email">Email address</label>
-        <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required>
+        <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required  oninvalid="this.setCustomValidity('Please Enter Your email')"
+        oninput="this.setCustomValidity('')">
       </div>
       <div class="form-group">
         <label for="message">Message</label>
-        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required  oninvalid="this.setCustomValidity('Please Enter Your Message')"
+        oninput="this.setCustomValidity('')"></textarea>
       </div>
       <button type="submit" name="submit" class="btn btn-outline-info">Submit</button>
     </form>
