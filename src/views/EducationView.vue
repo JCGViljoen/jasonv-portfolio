@@ -2,7 +2,7 @@
     <div >
         <main role="main" class="container">
     <section id="education">
-      <h1 class="animate__animated animate__fadeInLeft" id="resume">Resume</h1>
+      <h1 class="animate__animated animate__fadeInLeft" id="resume">My Expertise</h1>
       <h2 >Education</h2>
       
       <ul class="timeline">

@@ -1,5 +1,6 @@
 <template>
   <div class="row">
+    <h1>ABOUT <span>JASON</span>VILJOEN</h1>
     <div class="col" id="image">
       <img class="picture animate__animated animate__fadeInLeft" src="https://i.postimg.cc/Twxg0MbT/90928282-1613696178782933-8697521963691671552-n.jpg" alt="" loading="lazy">
     </div>
@@ -8,7 +9,9 @@
         I can Help You!</h1>
       <p>Hi! Jason <span>Viljoen</span>, and I’m a developer who has a passion for building clean web applications with intuitive functionality. I enjoy the process of turning ideas into reality using creative solutions. I’m always curious about learning new skills, tools, and concepts. In addition to working on various solo full stack projects.</p>
       <div class="lead">
-        <h4><a href="Jason Viljoen CV.htm" download >Download my resume here</a></h4>
+        <h4><a class="display-6"
+          href="https://docs.google.com/document/d/17_XPHqjSRyKjDiIGQVyIjoE_mWRaJlVu/edit?usp=sharing&ouid=106240349729281005870&rtpof=true&sd=true"
+          target="_blank" download>Download my resume here</a></h4>
       </div>
     </div>
   </div>
@@ -29,6 +32,7 @@ export default {
   align-items: center;
   background-color: #010101;
   height: 100vh;
+  color: white;
 }
 
 .col {
@@ -37,6 +41,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  color: white;
 }
 
 .text {
