@@ -5,7 +5,7 @@
         <div class="container">
           <h1 id="welcome" class="h1 animate__animated animate__jackInTheBox">Welcome</h1>
           <h1 class="hero-title animate__animated animate__slideInLeft">My Name is <span>J</span>ason and I am an <span class="animate__flash">aspiring</span> Full Stack <span>Web</span> Developer</h1>
-          <p class="her-desciption">I look forward to working with you. <text class="animate__animated animate__hinge">😁😅😀</text></p>
+          <p class="her-desciption">I look forward to working with you.</p>
           <router-link id="btn" class="btn btn-ouline-danger animate__animated animate__pulse " to="/contact"><span>Let's get in touch...</span></router-link>
          
         </div>
