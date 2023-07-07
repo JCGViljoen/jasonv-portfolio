@@ -36,6 +36,7 @@
   border-radius: 10px 10px;
   box-shadow: #000 3px 4px 5px;
   margin-bottom: 50vh;
+  color: white;
 }
 
 .form-container{

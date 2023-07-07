@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <section id="skills">
       <h2>Skills</h2>
       <ul class="list-group" v-for="(skills, index) in project" :key="skills.id" :class="{ active: index === 0 }">
@@ -35,5 +35,9 @@ export default {
 
 .animated-image:hover {
   transform: scale(1.1);
+}
+
+.container{
+ border: solid #000;
 }
 </style>

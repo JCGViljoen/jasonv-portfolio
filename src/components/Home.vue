@@ -3,9 +3,10 @@
       <div id="app">
       <div class="hero">
         <div class="container">
-          <h1 class="hero-title animate__animated animate__bounce">Welcome,My Name is <span>J</span>ason and I am an <span class="animate__flash">aspiring</span> Full Stack <span>Web</span> Developer</h1>
+          <h1 id="welcome" class="h1 animate__animated animate__jackInTheBox">Welcome</h1>
+          <h1 class="hero-title animate__animated animate__slideInLeft">My Name is <span>J</span>ason and I am an <span class="animate__flash">aspiring</span> Full Stack <span>Web</span> Developer</h1>
           <p class="her-desciption">I look forward to working with you. <text class="animate__animated animate__hinge">😁😅😀</text></p>
-          <router-link id="btn" class="btn btn-ouline-danger animate__animated animate__fadeInLeft" to="/contact"><span>Lets in touch</span></router-link>
+          <router-link id="btn" class="btn btn-ouline-danger animate__animated animate__pulse " to="/contact"><span>Let's get in touch...</span></router-link>
          
         </div>
         
@@ -73,12 +74,7 @@
       margin-top: 3rem;
     }
   
-  .icons{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-      
+   
   
   #btn {
   margin: 1rem;
@@ -87,7 +83,7 @@
   display: inline-block;
   padding: 10px 20px;
   font-size: 18px;
-  color: #fff;
+  
   background-color: #000;
   
   cursor: pointer;
@@ -95,31 +91,18 @@
   
 }
 
-.sidebar {
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
+#btn:hover{
+  background-color: #b3fffd;
+  color: #000;
 }
 
-.sidebar a {
-  display: block;
-  margin-bottom: 10px;
+#btn span:hover{
+  color: #000;
 }
-
-.sidebar a .bi {
-  font-size: 24px;
-  color: #fff;
+#welcome{
+  font-weight: 700;
+  
 }
-
-.sidebar a:hover .bi {
-  color: #00fff7;
-}
-
 
       
   </style>
