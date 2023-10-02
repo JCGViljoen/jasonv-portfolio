@@ -25,7 +25,7 @@ export default {
 
 <style scoped>
 .row {
-  margin-top: 7rem;
+ 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
