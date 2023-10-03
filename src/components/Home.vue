@@ -27,105 +27,108 @@
   </script>
   
   <style scoped>
-  
-  
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-  
-  
+
   *,
   *::before,
-  ::after{
+  *::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
-  
-  
-  
-  .hero {
-        
-        color: white;
-        padding: 100px 0;
-        text-align: center;
-        border: solid #000;
-        background: url(https://i.postimg.cc/VkxQ22Fk/pexels-adrien-olichon-2931246.jpg) no-repeat 100vh;
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        
-    
-      }
-  
-      .hero-title {
-        font-size: 36px;
-        font-weight: bold;
-        margin-bottom: 30px;
-      }
-  
-      .hero-description {
-        font-size: 18px;
-        color: #6c757d;
-        margin-bottom: 30px;
-      }
 
-      .profile-image {
-    float: left; 
-    margin-right: 20px; 
+  .hero {
+    color: white;
+    padding: 50px 0; 
+    text-align: center;
+    background: url(https://i.postimg.cc/VkxQ22Fk/pexels-adrien-olichon-2931246.jpg) no-repeat 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+
+  .hero-title {
+    font-size: 20px; 
+    font-weight: bold;
+    margin-bottom: 20px; 
+  }
+
+  .hero-description {
+    font-size: 14px; 
+    color: #6c757d;
+    margin-bottom: 20px; 
+  }
+
+  .profile-image {
+    float: none; 
+    margin: 0 auto 20px; 
   }
 
   .profile-image img {
+    margin-top: 10rem;
     max-width: 15rem; 
-    height: auto;
-    border-radius: 50px;
-    box-shadow: #000 3px 5px 6px; 
+    border-radius: 50%; 
+    box-shadow: #000 3px 5px 6px;
   }
 
   .hero-content {
-    overflow: hidden; 
+    overflow: hidden;
   }
-  
-    span{
-      color: #b3fffd;
-      font-family:'Dancing Script', cursive;
-  
-    }
-  
-    .container{
-      margin-top: 3rem;
-    }
-  
-   
-  
+
+  span {
+    color: #b3fffd;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  .container {
+    margin-top: 1rem; 
+  }
+
   #btn {
-  margin: 1rem;
-  border: dotted #000;
- 
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 18px;
-  
-  background-color: #000;
-  
-  cursor: pointer;
- 
-  
-}
+    margin: 1rem;
+    padding: 10px 20px;
+    font-size: 14px; 
+    cursor: pointer;
+  }
 
-#btn:hover{
-  background-color: #b3fffd;
-  color: #000;
-}
+  #btn:hover {
+    background-color: #b3fffd;
+    color: #000;
+  }
 
-#btn span:hover{
-  color: #000;
-}
-#welcome{
-  font-weight: 700;
-  
-}
+  #btn span:hover {
+    color: #000;
+  }
 
-      
-  </style>
+  #welcome {
+    font-weight: 700;
+  }
+
+  @media (max-width: 300px) {
+    .hero {
+      padding: 20px 0; 
+    }
+
+    .hero-title {
+      font-size: 14px; 
+      margin-bottom: 10px; 
+    }
+
+    .hero-description {
+      font-size: 12px; 
+      margin-bottom: 10px; 
+    }
+
+    .profile-image img {
+      max-width: 10rem; 
+      margin-top: 15rem;
+    }
+
+    #btn {
+      font-size: 12px; 
+    }
+  }
+</style>
   

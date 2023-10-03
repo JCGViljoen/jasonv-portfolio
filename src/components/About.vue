@@ -10,7 +10,7 @@
       <p>Hi! Jason <span>Viljoen</span>, and I’m a developer who has a passion for building clean web applications with intuitive functionality. I enjoy the process of turning ideas into reality using creative solutions. I’m always curious about learning new skills, tools, and concepts. In addition to working on various solo full stack projects.</p>
       <div class="lead">
         <h4><a class="display-6"
-          href="https://docs.google.com/document/d/17_XPHqjSRyKjDiIGQVyIjoE_mWRaJlVu/edit?usp=sharing&ouid=106240349729281005870&rtpof=true&sd=true"
+          href="https://docs.google.com/document/d/13P3saHFYDQMWv_Tqj_wNv9qKXhuhafW7qJIOk8vR7JA/edit?usp=sharing"
           target="_blank" download>Download my resume here</a></h4>
       </div>
     </div>
@@ -19,19 +19,38 @@
 
 <script>
 export default {
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const image = document.querySelector('.picture');
 
-}
+      if (image) {
+        const scrollPosition = window.scrollY;
+        
+        if (scrollPosition > 100) {
+          image.classList.add('animate__animated', 'animate__fadeInLeft');
+        } else {
+          image.classList.remove('animate__animated', 'animate__fadeInLeft');
+        }
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>
 .row {
- 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background-color: #010101;
-  height: 100vh;
+  min-height: 100vh;
   color: white;
 }
 
@@ -64,6 +83,7 @@ export default {
   box-shadow: white 3px 5px 4px;
   width: 20rem;
   height: 22rem;
+  transition: opacity 0.3s;
 }
 
 h4 a {
@@ -91,7 +111,6 @@ h4 a:hover {
 @media (max-width: 800px) {
   .row {
     margin-top: 7rem;
-  
     height: auto;
   }
 
@@ -101,7 +120,7 @@ h4 a:hover {
   }
 
   #image img {
-    width: 100%;
+    width: 10rem;
     height: auto;
     max-width: 300px;
     max-height: 300px;
