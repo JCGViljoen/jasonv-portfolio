@@ -54,14 +54,14 @@ export default {
   color: white;
 }
 
-.col {
+/* .col {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
   color: white;
-}
+} */
 
 .text {
   flex-basis: 50%;

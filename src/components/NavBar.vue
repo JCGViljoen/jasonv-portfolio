@@ -1,109 +1,87 @@
 <template>
-  <nav class="navbar bg-body-tertiary fixed-top">
+  <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
       <router-link class="navbar-brand" to="/">
         <img id="logo" src="https://i.postimg.cc/rmF1h6K2/jv-personal-logo-by-hinatainn-d8mt9g0-pre.jpg" alt="logo" loading="lazy">
       </router-link>
-    
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img class="toggle-img" src="https://i.postimg.cc/tJj04LWJ/toggle.gif" alt="Toggle" />
       </button>
-    
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-            <img id="logo" src="https://i.postimg.cc/rmF1h6K2/jv-personal-logo-by-hinatainn-d8mt9g0-pre.jpg" alt="logo">
-          </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <router-link @click="toggleOffcanvas" to="/">Home</router-link>
-
-            </li>
-            
-            <li class="nav-item">
-              <router-link to="/education">Resume</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/projects">Projects</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/testimonials">Testimonials</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link @click="toggleOffcanvas" to="/contact">Contact</router-link>
-            </li>
-          </ul>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <router-link to="/">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/about">About</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/education">Resume</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/projects">Projects</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/testimonials">Testimonials</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/contact">Contact</router-link>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
 </template>
-<script>
 
-export default {
-  data() {
-    return {
-      isOffcanvasOpen: false,
-    };
-  },
-  methods: {
-    toggleOffcanvas() {
-      this.isOffcanvasOpen = !this.isOffcanvasOpen;
-    },
-  },
-};
-</script>
 
   
-  <style>
-  nav {
-    padding: 10px;
-    box-shadow: #000 3px 5px 4px;
-  }
+<style>
+nav {
+  padding: 10px;
+  background-color: #000;
+}
+div.container-fluid{
+  background-color: #000;
+}
 
-  .offcanvas-body.ul {
-    text-decoration: none;
-    color: white;
-  }
+ul li{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#logo {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50px;
+  box-shadow: #000 3px 5px 4px;
+}
 
-  .offcanvas-body {
-    background-color: #000;
-  }
+.navbar-toggler {
+  transition: transform 0.3s;
+}
 
-  #logo {
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50px;
-    box-shadow: #000 3px 5px 4px;
-  }
+.navbar-toggler.open {
+  transform: rotate(90deg);
+}
 
+.toggle-img{
+  width: 5rem;
+  height: auto;
+}
+
+@media (max-width: 300px) {
   .navbar-toggler {
-    transition: transform 0.3s;
+    display: block;
   }
 
   .navbar-toggler.open {
     transform: rotate(90deg);
   }
 
-  @media (max-width: 300px) {
-    .navbar-toggler {
-      display: block;
-    }
-
-    .navbar-toggler.open {
-      transform: rotate(90deg);
-    }
-
-    .offcanvas {
-      width: 100%;
-    }
-
-    .offcanvas.show {
-      right: 0;
-    }
+  .offcanvas {
+    width: 100%;
   }
-  </style>
-  
+
+  .offcanvas.show {
+    right: 0;
+  }
+}
+</style>
